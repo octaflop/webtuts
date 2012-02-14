@@ -1,0 +1,6 @@
+markdown: rdiscount
+pygments: true
+server: true
+exclude: src/
+permalink: /post/:year/:month/:day/:title
+
