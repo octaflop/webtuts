@@ -1,19 +1,29 @@
-
-.white-belt {
+.belts div {
+	background: url("/static/img/textures/groovepaper.png");
 }
+
 .white-belt h2 {
+	background: #fefefe;
 }
 
-.yellow-belt {
+.yellow-belt h2 {
+	color: #fbfbfb;
+	background: #e7f20c;
 }
 
-.green-belt {
+.green-belt h2 {
+	color: #fbfbfb;
+	background: #56bf0f;
 }
 
-.orange-belt {
+.orange-belt h2 {
+	color: #fbfbfb;
+	background: #f28b0c;
 }
 
-.purple-belt {
+.purple-belt h2 {
+	color: #fbfbfb;
+	background: #790fbf;
 }
 
 .black-belt h2 {

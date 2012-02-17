@@ -3,6 +3,11 @@
 		<h2>White Belt</h2>
 		<p>Still new to the whole computer thing? You're going to want to
 		start here. </p>
+		<ul class='topic-list'>
+			{% for post in post.categories.white-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
 				OK! &raquo;
@@ -10,9 +15,13 @@
 		</p>
 	</div>
 
+
 	<div class="span4 yellow-belt">
 		<h2>Yellow Belt</h2>
-		<p>Still new to the whole computer thing?</p>
+		<p>
+			Feeling more comfortable with the terminology? Ready to start making
+			stuff? This is the next stop for the novice hacker.
+		</p>
 		<p>
 			<a class='btn'>
 				OK! &raquo;
@@ -30,6 +39,8 @@
 		</p>
 	</div>
 </div>
+
+<br class='clear' />
 
 <div class="row belts">
 	<div class="span4 orange-belt">
