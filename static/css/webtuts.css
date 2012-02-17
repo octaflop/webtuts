@@ -2,6 +2,10 @@
 	background: url("/static/img/textures/groovepaper.png");
 }
 
+.belts li > a {
+	/*color: #fed300;*/
+}
+
 .white-belt h2 {
 	background: #fefefe;
 }
