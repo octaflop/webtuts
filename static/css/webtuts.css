@@ -1,5 +1,24 @@
+body, html {
+	background: #080808;
+}
+
+.row {
+	margin-left: -0.2em;
+}
+
 .belts div {
 	background: url("/static/img/textures/groovepaper.png");
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 0.5em;
+	margin: 0.1em;
+}
+
+.belts h2 {
+	background: url("/static/img/textures/groovepaper.png");
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 0.25em;
 }
 
 .belts li > a {
