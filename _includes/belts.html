@@ -3,56 +3,103 @@
 		<h2>White Belt</h2>
 		<p>Still new to the whole computer thing? You're going to want to
 		start here. </p>
+		<ul class='topic-list'>
+			{% for post in site.categories.white-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
-				OK! &raquo;
+				Let's go! &raquo;
 			</a>
 		</p>
 	</div>
 
+
 	<div class="span4 yellow-belt">
 		<h2>Yellow Belt</h2>
-		<p>Still new to the whole computer thing?</p>
+		<p>
+			Feeling more comfortable with the terminology? Ready to start making
+			stuff? This is the next stop for the novice hacker.
+		</p>
+		<ul class='topic-list'>
+			{% for post in site.categories.yellow-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
-				OK! &raquo;
+				Ka-pow! &raquo;
 			</a>
 		</p>
 	</div>
 
 	<div class="span4 green-belt">
 		<h2>Green Belt</h2>
-		<p>Still new to the whole computer thing?</p>
+		<p>
+			Now it's time to put our skills to use and start contributing back to the
+			community. These lessons focus on Internet publishing.
+		</p>
+		<ul class='topic-list'>
+			{% for post in site.categories.green-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
-				OK! &raquo;
+				Hi-yaa! &raquo;
 			</a>
 		</p>
 	</div>
 </div>
 
+<br class='clear' />
+
 <div class="row belts">
 	<div class="span4 orange-belt">
 		<h2>Orange Belt</h2>
-		<p>Still new to the whole computer thing?</p>
+		<p>
+			Automation is the name of the orange-belt game. These lessons focus on
+			getting your computer to take care of your work for you.
+		</p>
+		<ul class='topic-list'>
+			{% for post in site.categories.orange-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
-				OK! &raquo;
+				Skadoosh! &raquo;
 			</a>
 		</p>
 	</div>
 	<div class="span4 purple-belt">
 		<h2>Purple Belt</h2>
-		<p>Still new to the whole computer thing?</p>
+		<p>
+			Ready to start programming? No time like the present! These guides focus
+			on best programming practises and stuff a bit more advanced than
+			basic scripting and automation.
+		</p>
+		<ul class='topic-list'>
+			{% for post in site.categories.purple-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
-				OK! &raquo;
+				Unce! &raquo;
 			</a>
 		</p>
 	</div>
 	<div class="span4 black-belt">
 		<h2>Black Belt</h2>
-		<p>Hello, fellow master. Still think you're up for a challenge?</p>
+		<p>Hello, fellow master. Still think you're up for a challenge? These
+		lessons focus on being the best hacker you can be.</p>
+		<ul class='topic-list'>
+			{% for post in site.categories.black-belt %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
 		<p>
 			<a class='btn'>
 				Bring it! &raquo;
