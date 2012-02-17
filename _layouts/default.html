@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-		<title>{{ page.title }} &gt; Web Tutorials</title>
+		<title>{{ page.title }} &gt; hacktivities.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -14,6 +14,7 @@
 
     <!-- Le styles -->
     <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/webtuts.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -38,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">Web Tutorials</a>
+          <a class="brand" href="/">hacktivities.org</a>
           <div class="nav-collapse">
             <ul class="nav">
 							{% include sitenav.html %}
@@ -47,14 +48,26 @@
         </div>
       </div>
     </div>
+
 		<div class="container">
 			<div class="hero-unit">
-				<h1>Web Tutorials</h1>
-				<img src="/static/img/tutorial.png" />
+				<h1>Enlightenment through Silicon</h1>
+				<p>
+					A collection of computer tutorials for all audiences. Separated into
+					6 degrees of difficulty, and colour-coded by subject:
+				</p>
+				<!--<img src="/static/img/tutorial.png" />-->
 				<p><a class="btn btn-primary btn-large" id="learn">Learn more &raquo;</a></p>
 			</div>
 		</div>
 
+		<div class="container">
+			{% include belts.html %}
+		</div>
+
+		<hr />
+
+		<!--
 		<a class="btn btn-large" data-toggle="modal" data-target="#myModal" >Launch Modal &raquo;</a>
 
 		<div id="myModal" class="modal">
@@ -69,7 +82,7 @@
 					<a href="#" class="btn btn-primary">Save changes</a>
 					<a href="#" class="btn">Close</a>
 				</div>
-		</div>
+			</div> -->
 
     <div class="container">
 
@@ -79,6 +92,7 @@
     </div> <!-- /container -->
 
 		<div class="container archive">
+			<h3>Latest Posts</h3>
 			<ul>
 				{% for post in site.posts %}
 					<li>
