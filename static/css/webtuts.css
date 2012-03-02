@@ -31,7 +31,7 @@ body, html {
 
 .yellow-belt h2 {
 	color: #fbfbfb;
-	background: #e7f20c;
+	background: #D8D90B;
 }
 
 .green-belt h2 {
@@ -53,3 +53,9 @@ body, html {
 	color: #fbfbfb;
 	background: #090909;
 }
+
+/* Overrides for bootstrap theming */
+.container-white {
+	background: #fafafa;
+}
+
