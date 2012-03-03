@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-<div class="post container-white">
-<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-<article class="body">
-	{{ content }}
-</article>
+<div class="post container-white row-fluid">
+	<div class='span3'>
+		<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+	</div>
 
-<div class="meta">
-	posted: <a href="{{ page.url }}">{{ page.date }}</a>
-</div>
-
+	<article class="span9 body">
+		{{ content }}
+		<footer class="meta">
+		<i><a href="{{ page.url }}">{{ page.date }}</a></i>
+		</footer>
+	</article>
 </div>
 
