@@ -1,5 +1,5 @@
 ---
-layout: listing-white
+layout: listing-yellow
 title: White Belt
 permalink: /yellow-belt/
 ---

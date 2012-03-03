@@ -1,5 +1,5 @@
 ---
-layout: listing-white
+layout: listing-green
 title: Green Belt
 permalink: /green-belt/
 ---
