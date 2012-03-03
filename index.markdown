@@ -2,4 +2,4 @@
 layout: index
 title: Home
 ---
-Welcome to the tutorials page!
+Here are our latest tutorial offerings:
