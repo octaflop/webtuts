@@ -1,5 +1,5 @@
 ---
-layout: listing-white
+layout: listing-orange
 title: Orange Belt
 permalink: /orange-belt/
 ---

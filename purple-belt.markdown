@@ -1,5 +1,5 @@
 ---
-layout: listing-white
+layout: listing-purple
 title: Purple Belt
 permalink: /purple-belt/
 ---
