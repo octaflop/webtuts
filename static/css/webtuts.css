@@ -1,0 +1,61 @@
+body, html {
+	background: #080808;
+}
+
+.row {
+	margin-left: -0.2em;
+}
+
+.belts div {
+	background: url("/static/img/textures/groovepaper.png");
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 0.5em;
+	margin: 0.1em;
+}
+
+.belts h2 {
+	background: url("/static/img/textures/groovepaper.png");
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 0.25em;
+}
+
+.belts li > a {
+	/*color: #fed300;*/
+}
+
+.white-belt h2 {
+	background: #fefefe;
+}
+
+.yellow-belt h2 {
+	color: #fbfbfb;
+	background: #D8D90B;
+}
+
+.green-belt h2 {
+	color: #fbfbfb;
+	background: #56bf0f;
+}
+
+.orange-belt h2 {
+	color: #fbfbfb;
+	background: #f28b0c;
+}
+
+.purple-belt h2 {
+	color: #fbfbfb;
+	background: #790fbf;
+}
+
+.black-belt h2 {
+	color: #fbfbfb;
+	background: #090909;
+}
+
+/* Overrides for bootstrap theming */
+.container-white {
+	background: #fafafa;
+}
+
