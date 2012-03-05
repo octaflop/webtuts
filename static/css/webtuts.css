@@ -2,8 +2,8 @@ body, html {
 	background: #080808;
 }
 
-.row {
-	margin-left: -0.2em;
+.container > .row {
+	margin-left: -.2em; /* see below, belts div */
 }
 
 .belts div {
@@ -11,7 +11,7 @@ body, html {
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	padding: 0.5em;
-	margin: 0.1em;
+	margin: 0.1em; /* we correct this in .container > row. kind of a monkey-patch */
 }
 
 .belts h2 {
