@@ -1,0 +1,272 @@
+h1. Introduction: Dots or Lines
+
+To understand how to use image-editing tools on a computer, one must first understand how images are interpreted by a computer. In general, a computer will encode an image into its memory in one of two ways. This is because computers must store information _discretely_[1]. What does this mean for images? Basically, it means that images are stored as mathematical formulæ.
+
+h2. Pixels ("Dots")
+
+The first formula is based on the concept of _dots_, where each dot has a colour and location <span class="math">(x, y)</math> stored for the image. Because these dots resemble a 2-dimensional _map_ and because each chunk of information on each dot is called a _bit_, this form of storage is called a *bitmap*. Common bitmap formats (filetypes) include: @jpg@ / @jpeg@, @png@, @tiff@, and @gif@. Bitmaps are typically used when taking or manipulating a photograph. They fall short on more archival or artistic projects such as icons, comics, or logos. For these projects, one would want to use the next variety of image storage: _Vectors_.
+
+h2. Vectors ("Lines")
+
+The other formula is newer and is based on the concept of _lines_. Each line is created by combining one or more _points_[2] together. By calculating the curve of each point and adding properties like colour and fill, an image is stored into *vectors*. Common vector filetypes include: @svg@, @ai@[3] Vectors are a powerful format in that they can be scaled to any size with no reduction in quality. This makes them the perfect choice for logos, posters, and other line-art. A good rule of thumb is to use vectored image formats for anything involving text. Vectors fall short when capturing image or true-to-life renderings, but are fantastic at stylized displays.
+
+h2. Visualizing the difference
+
+The difference between bitmaps and lines becomes quite apparent when scaling images, as in figure {fig:rassvg}.
+
+bq. !Bitmap_VS_SVG(image)! {A comparison of bitmapped images (left) and vectorized images (right). {fig:rassvg}}
+
+
+
+h1. Common Concepts of all Image Editors
+
+When creating, manipulating, or formatting any image type, there are a number of workflow and technological concepts to keep in mind. These concepts are essential to becoming proficient with any image manipulation tool.
+
+h2. Layers
+
+All professional image editing software will include a concept of layers. Layers can be thought of as transparent slides upon which one can add media. This allows someone to experiment with say, a background colour, while keeping the rest of the image the same.
+
+h2. RGB vs CMYK vs Indexed
+
+Computers store colours in three main ways, each with a particular purpose in mind:
+
+h3. RGB
+
+*R*ed, *G*reen, *B*lue. These colours are used when displaying an image on the web or on another electronic device. These colours correspond to the physical pixel colours found in computer models.
+
+h3. CMYK
+
+*C*yan, *M*agenta, *Y*ellow, *K*ey[4]. These colours are used when the file is going to be printed on a physical medium, such as paper.
+
+h3. Indexed Colour
+
+Indexed colours refer to an image which has been compressed by removing un-used colours and only keeping track (_indexing_) of colours that are actually used in the image. This can make for poor quality photographs or gradients, but is useful for creating light-weight Internet images.
+
+h2. Cropping
+
+Sometimes the best addition one can make to an image is a subtraction. By cropping an image, one removes the edges of an image in favour of a more central subject.
+
+h2. Transparency
+
+Once an image has been created, sometimes one will want to use the image with different backgrounds for different stylistic effects. This is especially true for the web medium, and is essentially just another application of the concept of _layering_ (see above). Only certain filetypes can allow transparency, some common types include: @png@, @gif@, @svg@, and @ai@[5].
+
+h2. Selection and Manipulation
+
+*Almost every concept in computer software usage comes down to  the understanding of selection and manipulation.* Once you understand how to select data (pixels or lines in this case) and how to change that data (through a variety of methods to be discussed), you will be on the first steps to the path of mastering the computer as a tool.
+
+h2. Keyboard Shortcuts
+
+If you find yourself using the mouse more than the keyboard for selecting tools or making adjustments, then you will want to start learning common keyboard shortcuts for your most-used commands. Keyboard shortcuts are often shown in the right side of a selection in the file-menu.
+
+h2. Toolboxes
+
+Every image-editing tool has a toolbox of some sort. Each toolbox has its own collection of unique tools suited for whatever task you throw at them. An image listing the different types of toolboxes is shown in figure {fig:toolboxes}
+
+bq. !toolboxes(image)! {Different toolboxes of 4 different image-editing programs. From left to right: GIMP, Photoshop, Inkscap, Illustrator. {fig:toolboxes}}
+
+
+
+h1. Pixels: Using Raster Editors
+
+There are two main bitmaps editors available for professional use. The first is so popular it has become a verb and is synonymous with political controversy: *Photoshop*. Our contender is an open-source image manipulation program which has vastly improved in the past two years. Unlike Photoshop, the *GIMP*[6] is offered as _free software_ which has the specific meaning of allowing all the source code to be viewable and editable for free (a good analogy is Microsoft's Encarta vs. Wikipedia) [7] In the following sections, we will cover common ways to achieve tasks on both programs. There are subtle, but important differences to each program, and these will be discussed as they are encountered.
+
+h2. Selecting the Right Pixels
+
+As mentioned previously, the first half to understanding a computer program is to understand the data it selects and how it makes that selection. Pixel-based editors select, well... pixels. And sometimes this can be really helpful, because pixels tend to clump together in various patterns which can be selected. To make a selection, first select a selection tool (specific ones are covered below) and click and drag on the pixels you want. To _add_ to the selection, hold down the @shift@ button before you click again. To _subtract_ from the selection, hold down the @alt@ (@option@ in Apple systems) key before you click again. With a combination of these addition and subtraction properties, along with some specific selection types, one can usually easily find the right selection.
+
+h3. Feathering
+
+One more thing one can do while selecting pixels is _feather_ them. Feathering pixels means that a subset of pixels will be selected around the edges of the selection. This sort of selection is handy for creating a faded effect, or for subtle transitions from the adjusted selection to the unadjusted parts of the image. To feather a selection in _Photoshop_, click on the selection tool, then change the feather amount in the toolbar (the standard location is the upper left part of the screen). In the _GIMP_, the order to add feathering is slightly different: first make your selection. Then, from the @Select@ menu in the toolbar, click on {Feather...} and choose the amount of pixels you'd like to feather the selection by.
+
+h3. The Basic Box-Selection Model
+
+The most basic selection tool is the marquee or box selection tool. To use this tool, click on the rectangular selection icon [8] in the toolbar. Then, select a box of pixels in the image. Remember, you can adjust the amount of selection by using the @shift@ and @alt@ keys.
+
+h3. Other Polygon Selections and the Freeform Tool
+
+Another kind of selection tool is the polygon selection tool. To use this tool, select the edge of the part you want to select. This will create a point. When you click on the next edge, a line will be drawn between the points. Continue drawing around your selection in this manner until you hit the first point again (alternatively, you can press @Enter@ to get the first and last point to complete each other with a line). This will create a selection in the shape of the polygon you specified. To change points on the selection, just click and move them after making the selection (CS 3 or higher, GIMP 2.2 or higher). To delete a selection point, drag a point off of the canvas.
+
+Sometimes the polygon tool is too complicated for a simple selection. In these cases, you will want to use the _freeform select tool_ (also known as the lasso). This tool is not good for complicated selections, as it requires you to click and drag the entire selection, rather than setting up points from which you can re-draw a selection. To use this tool, choose it from the toolbar and draw around your selection by clicking and dragging the mouse cursor.
+
+h3. Selecting by Colour and other Properties
+
+There are times when we want to remove or replace a single colour, or a set of similar colours in the same region. This sort of selection is known as _uniform selection_ and is sometimes known in Photoshop as the _magic wand tool_. The best way to understand this tool is to experiment, but here are some tips to help you get started:
+
+* Selections can be all of the same colour in the same region, or all of the same colour regardless of region. The settings for this vary from program to program.
+* The tolerance of this tool is directly related to how many pixels it will select; a higher tolerance will select more pixels with similar properties.
+
+Remember, you can still use @Shift@ and @Alt@ to add to and subtract from your selection. With this tool in particular, one can make the perfect combination of selections to achieve your editing goal.
+
+h2. Manipulating the Selection
+
+The power of computational image processing really shines once you start trying to make adjustments to your selection. By making the right adjustments with the right amounts, you can achieve whatever artistic effect you need to.
+
+h3. Colour and Brightness
+
+Remember when I mentioned that there are two image colour categories? This manipulation is where this distinction can really make a difference. To change colour levels in Photoshop, click on {Image &gt; Adjustments &gt; Colour Balance...} and change the levels accordingly. The GIMP puts color adjustments into its own menu, and the colour balance options can be found under {Colours &gt; Colour Balance...}.
+
+To adjust brightness and contrast in Photoshop, click on {Image &gt; Adjustments &gt; Brightness/Contrast...} and in GIMP, click on {Colours &gt; Brightness-Contrast...}.
+
+A combination of these tools is found in the _Curves_ menu of each program. Curves are an advanced way of looking at all of the colours (on the x-axis) and changing their values (on the y-axis) by an indexed amount (variations of 1.0). This means that a <span class="math">1:1</math> line will be <span class="math">45^{\circ}</math> and is un-manipulated. Points are added to the line by clicking on the line, and removed by dragging the line off.
+
+Curves are accessible in Photoshop by going to {Image &gt; Adjustments &gt; Curves...} and in GIMP by going to {Colours &gt; Curves...}.
+
+h3. Filters
+
+Filters are miscellaneous adjustments one can make to an image to give them a special effect. This is also the main way in which Photoshop and the GIMP differ. Photoshop has more filters and those filters tend to have more pleasing effects, however the GIMP uses its own filters and can hold its own for a number of artistic types of filters.
+
+Both the GIMP and Photoshop have a @Filter@ menu item in the toolbar. Be sure to make a selection before using this menu.
+
+h1. Lines: Using Vector Editors
+
+Because Vector editors store lines and points instead of individual pixels, their editing programs are quite different. The two programs we will be discussing are _Adobe Illustrator_ and _Inkscape_. Once again, Illustrator is a proprietary program while Inkscape is an open-source alternative. However, Inkscape isn't modelled after Adobe Illustrator, it is modelled after Corel Draw. This means that there are more differences than similarities between the two programs. Hopefully, this guide will explain the similarities and differences enough to give you a chance to try each program out on your own.
+
+h2. Selecting Points and Lines
+
+When selecting with a vector-editor, we are selecting lines and points rather than pixels. Because lines can be grouped together to make certain images, there are two distinct selection tools: the _Arrow_ and the _Direct Select_ tool. The arrow tool will typically select a group of objects or an entire line, while the direct select tool will select individual points or line segments.
+
+h2. Drawing Points and Lines
+
+There are a number of methods to add a point or line to your document. The easiest way is to use the _Pencil Tool_ (available in both editors) and free-drawing the line. This method has a number of drawbacks, a primary one being that it creates too many points, causing a rougher-looking final product.
+
+h3. The Pen Tool
+
+This is The most difficult tool listed in this guide, but once you understand the initial workings of the _pen_, you will find it to be indispensable. The Pen tool is in fact also available in Photoshop, albeit a less powerful version.
+
+To use the pen tool, understand that every point now corresponds to a line _and_ a *curve*. A _curve_ in this case is the direction in which the point will direct the line. To adjust a curve, select a point on the line, then select one of the _handles_ that appears next to that point and drag it to change the curve direction.
+
+To remove a point in photoshop, first use the direct
+
+h2. Manipulating Points and Lines
+
+Manipulating points on a line in a vector image will change the shape and direct of the line. This manipulation is a lot different than changing pixels in that each point contains a lot more information.
+
+To select a point, click on the _direct select_ tool (in Photoshop) or the _edit path by node_ tool. Then, click on the point you want to manipulate (see figure {fig:vector&#95;point}). If you want, you can manipulate multiple points by holding the @shift@ key down before you click on the next point (see figure {fig:vector&#95;point&#95;select}).
+
+Each individual point has a number of options which changes the way in which the line is affected by the point. To affect the point, one or more _handles_ will apprear around the point once selected. These _handles_ will change the direction and velocity of each line[9]. _Asymmetric_ points can have different _handle_ lengths on each handle, while _symmetric_ points will adjust all handles in the same way per point.
+
+bq. !vector_point(image)! {An example of selecting a point on a line in Inkscape. The point in blue to the left has been already selected, while the point in red is just being hovered over by the point-select tool. {fig:vector&#95;point}}
+
+
+
+bq. !vector_point_select_move(image)! {Two selected points that have been moved together by using the @shift@ key to select the points. {fig:vector&#95;point&#95;select}}
+
+
+
+h2. Object Positioning and Grouping
+
+Another powerful feature of vector-editing programs (and the format in general) is the ability to chunk together lines and polygons into different groups. _Objects_ are a functional grouping which is comprised of a group of lines and points sharing similar colour properties. For example, a red square with a purple border cannot be part of the same object as a blue square with a red border. In order to chunk together those objects, we place them into a group _group_.
+
+After being placed into a group or object, the set of lines and polygons making up that chunk can be manipulated as you wish. When you are done making your grouped changes, you can _ungroup_ those objects (also known as "breaking apart" objects). Understanding when to use groups and objects is essential to understanding vector-based imaging.
+
+Groups and objects can be positioned on the _z-index_[10] much like layers. Options for each group or object move the object up or down on the page. The option @send to back@ will place the object on the very "back" of the page, and the object will be covered up by any other objects in "front" of it. The option @send to front@ will conversely ensure that no other objects can appear above the one sent to the front.
+
+h2. Basic Conversion Techniques (Raster to Vector)
+
+Converting a vector image to a raster format is trivial, simply use the {Export as...} function in the @File@ menu of either Inkscape or Illustrator. This conversion is easy because the image is being broken down into pixels, rather than being turned into mathematical points.
+
+Conversion from bitmap to vector is a lot more involved as a process. To convert a bitmap image, you must first import the bitmap into the program by clicking on {File &gt; Import...} and selecting the bitmap you'd like to convert.
+
+Although there are a number of computational tools to assist you with this process, the best results are typically achieved by manually tracing the raster image into a vector format. Both techniques are discussed below.
+
+h3. Using the automatic conversion tools
+
+To convert an image in Inkscape, open {Path &gt; Trace Bitmap...} and select the mode. @Single-scan@ mode will create an outline while @Multi-scan@ mode will create a number of small polygons. Once scanned, you can manipulate the image like you would any other vectorized image (see figure {fig:vector&#95;convert}).
+
+bq. !vector_convert(image)! {An example of the vector bitmap-tracing options. The @update@ button. Shows what the conversion will look like, and pressing @OK@ will convert the image (a converted image is show on the right). {fig:vector&#95;convert}}
+
+
+
+h3. The manual method
+
+To manually convert a bitmap to a vector, first import it (as described above). Next, be sure that the image is scaled up enough to capture the details you want to draw. Finally, place the image on a _layer_ behind all others and _lock_ the layer by clicking on the padlock icon. This will ensure that your new drawing will in no way affect the original image. Create layers above the original image and sketch around the image (see figure {fig:vector&#95;sketch}). Be sure to create groups for parts of the image which belong together. Before saving, be sure to remove the embedded bitmap, or your filesize will suffer.
+
+bq. !vector_sketch(image)! {An example of the manual conversion technique. Each coloured polygon is hand-drawn above the image. To achieve the highest quality, one can use a series of layers with varying transparencies. {fig:vector&#95;sketch}}
+
+
+
+h1. Image File Formats
+
+h2. Terms
+
+* *Transparency*  --  The ability of an Image to show other colours or images from behind the image.
+* *Lossless*  --  The format will not lose quality upon continuous saving. _Lossy_ formats will continuously apply compression, which causes a significant reduction of quality and size.
+
+h2. Image Filetypes
+
+Images are mainly stored in two ways:
+
+# *Raster/Bitmap*: Each dot (or _pixel_) is stored into the file. Compression blends pixels together and zooming in on an image will cause dottiness (as in the left side of fig {fig:rassvg}.
+# *Vector*: Lines are stored into the image as mathematical formulæ (as in the right side of fig {fig:rassvg}.
+
+h2. Raster Image Filetypes
+
+<blockquote>
+
+Extension &amp; Stands For &amp; description &amp; Windows App &amp; Mac App &amp; Linux App &amp; lossless? &amp; transparent? 
+
+
+@jpg@/@jpeg@ &amp; Joint Photographic Experts Group &amp; The basic filetype for taking photos from a digital camera &amp; Image Viewer, Adobe Photoshop &amp; Preview, iPhoto &amp; Eye of Gnome, _*GNU Image Processor  (GIMP)*_ &amp; *No* &amp; *No* 
+
+
+@gif@ &amp; Graphic Interchange Format &amp; The former standard filetype for web images. Lightweight, but bad for gradients and photos. Good for basic images &amp; Image Viewer, Adobe Photoshop, Adobe Fireworks &amp; Preview, iPhoto, Fireworks &amp; Eye of Gnome, _*GNU Image Processor  (GIMP)*_ &amp; *No* &amp; *Yes* 
+
+
+@png@ &amp; Portable Network Graphics &amp; The new standard for web images. Lightweight and can handle gradients and photos. Superior text-rendering compared to JPG. &amp; Image Viewer, Adobe Photoshop &amp; Preview, iPhoto &amp; Eye of Gnome, _*GNU Image Processor  (GIMP)*_ &amp; *Yes* &amp; *Yes* 
+
+
+@raw@, @crw@, @orf@ &amp; uncompressed means Raw &amp; The modern standard for image capture. No compression makes for big files, but no quality is lost due to compression. &amp; Image Viewer, Adobe Photoshop (CS1 and later) &amp; Preview, iPhoto &amp; Eye of Gnome, _*GNU Image Processor  (GIMP)*_ (with UFRaw plugin) &amp; *Yes* &amp; *No* 
+
+
+@tif@, @tiff@ &amp; Tagged Image Format &amp; The standard for scanned documents or high-data images (such as geo-tagged images or archiving). &amp; Image Viewer, Adobe Photoshop &amp; Preview, iPhoto &amp; Eye of Gnome, _*GNU Image Processor  (GIMP)*_ &amp; *Both (depends on compression)* &amp; *No* 
+
+
+</blockquote>
+
+h2. Vector Filetype
+
+<blockquote>
+
+Extension &amp; Stands For &amp; description &amp; Windows App &amp; Mac App &amp; Linux App 
+
+
+@svg@ &amp; Scalable Vector Format &amp; The open standard for vector images. &amp; Image Viewer, Adobe Illustrator, _*Inkscape*_ &amp; Preview, iPhoto, _*Inkscape*_ &amp; Eye of Gnome, _*Inkscape*_ 
+
+
+@ai@ &amp; Adobe Illustrator &amp; Adobe's proprietary format for vectors. More advanced support for layers and masking. No real advantage over @SVG@ filetype. &amp; *Adobe Illustrator* &amp; Preview, *Adobe Illustrator* &amp; Eye of Gnome, _*Inkscape*_ 
+
+
+</blockquote>
+
+
+fn1. In this context, _discrete_ refers to the idea of separate integers. One can think of computers working in a step-by-step processes, rather than a continuous one. Like a set of stairs versus a ramp
+
+
+fn2. Points are not dots! They may seem like synonymous terms, but dots almost always refer to bitmapped images, while points usually refers to a vector image.
+
+
+fn3. This format is known as Adobe Illustrator format and is proprietary. However, one can use Inkscape to convert @ai@ files to the more appropriate @svg@. The only really benefit to using @ai@ is Adobe Illustrator features grouped layers, which can be useful in larger projects. Illustrator can also edit @svg@ files, so the conversion is barely warranted.
+
+
+fn4. Contrary to popular belief, the *K* in @CMYK@ actually stands for _*K*ey_, which is the primary colour of black used in the printing process. Though this value is now typically a standard black, it is useful to know the correct historic rationale for this alphabetism.
+
+
+fn5. A fuller listing of image filetypes is found in the appendix
+
+
+fn6. GNU Image Manipulation Program
+
+
+fn7. Of course, the @GIMP@ is also offered for free as in without having to pay money for the software; "free beer".
+
+
+fn8. Most selection icons feature a polygon of some sort with a dashed/dotted line.
+
+
+fn9. A line with a velocity is a vector, hence the name.
+
+
+fn10. If you imagine the 2-dimensional space on your screen was <span class="math">x, y</math>, then the <span class="math">3^{rd}</math> dimension is the <span class="math">z</math>-axis
+
+
+
