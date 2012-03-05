@@ -1,5 +1,5 @@
 ---
-layout: listing-white
+layout: listing-black
 title: Black Belt
 permalink: /black-belt/
 ---
