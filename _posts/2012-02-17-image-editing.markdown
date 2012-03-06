@@ -16,7 +16,7 @@ mathematical formulæ.
 ## Pixels (“Dots”)
 
 The first formula is based on the concept of *dots*, where each dot has
-a colour and location $(x, y)$ stored for the image. Because these dots
+a colour and location `(x, y)` stored for the image. Because these dots
 resemble a 2-dimensional *map* and because each chunk of information on
 each dot is called a *bit*, this form of storage is called a **bitmap**.
 Common bitmap formats (filetypes) include: `jpg` / `jpeg`, `png`,
@@ -41,10 +41,12 @@ are fantastic at stylized displays.
 ## Visualizing the difference
 
 The difference between bitmaps and lines becomes quite apparent when
-scaling images, as in figure {fig:rassvg}.
+scaling images, as in figure 1.
 
-> ![image](Bitmap_VS_SVG) {A comparison of bitmapped images (left) and
-> vectorized images (right). {fig:rassvg}}
+![image](/static/img/image-editing/Bitmap_VS_SVG.png) 
+
+> A comparison of bitmapped images (left) and
+> vectorized images (right).
 
 # Common Concepts of all Image Editors
 
@@ -119,12 +121,13 @@ file-menu.
 
 Every image-editing tool has a toolbox of some sort. Each toolbox has
 its own collection of unique tools suited for whatever task you throw at
-them. An image listing the different types of toolboxes is shown in
-figure {fig:toolboxes}
+them. An image listing the different types of toolboxes is shown in this
+figure:
 
-> ![image](toolboxes) {Different toolboxes of 4 different image-editing
+![image](/static/img/image-editing/toolboxes.png) 
+
+> Different toolboxes of 4 different image-editing
 > programs. From left to right: GIMP, Photoshop, Inkscap, Illustrator.
-> {fig:toolboxes}}
 
 # Pixels: Using Raster Editors
 
@@ -166,7 +169,7 @@ the unadjusted parts of the image. To feather a selection in
 in the toolbar (the standard location is the upper left part of the
 screen). In the *GIMP*, the order to add feathering is slightly
 different: first make your selection. Then, from the `Select` menu in
-the toolbar, click on {Feather…} and choose the amount of pixels you’d
+the toolbar, click on `Feather…` and choose the amount of pixels you’d
 like to feather the selection by.
 
 ### The Basic Box-Selection Model
@@ -228,24 +231,24 @@ effect you need to.
 
 Remember when I mentioned that there are two image colour categories?
 This manipulation is where this distinction can really make a
-difference. To change colour levels in Photoshop, click on {Image \>
-Adjustments \> Colour Balance…} and change the levels accordingly. The
+difference. To change colour levels in Photoshop, click on `Image >
+Adjustments > Colour Balance…` and change the levels accordingly. The
 GIMP puts color adjustments into its own menu, and the colour balance
-options can be found under {Colours \> Colour Balance…}.
+options can be found under `Colours > Colour Balance…`.
 
-To adjust brightness and contrast in Photoshop, click on {Image \>
-Adjustments \> Brightness/Contrast…} and in GIMP, click on {Colours \>
-Brightness-Contrast…}.
+To adjust brightness and contrast in Photoshop, click on `Image >
+Adjustments > Brightness/Contrast…` and in GIMP, click on `Colours >
+Brightness-Contrast…`.
 
 A combination of these tools is found in the *Curves* menu of each
 program. Curves are an advanced way of looking at all of the colours (on
 the x-axis) and changing their values (on the y-axis) by an indexed
-amount (variations of 1.0). This means that a $1:1$ line will be
-$45^{\circ}$ and is un-manipulated. Points are added to the line by
+amount (variations of 1.0). This means that a 1:1 line will be
+45&#176; and is un-manipulated. Points are added to the line by
 clicking on the line, and removed by dragging the line off.
 
-Curves are accessible in Photoshop by going to {Image \> Adjustments \>
-Curves…} and in GIMP by going to {Colours \> Curves…}.
+Curves are accessible in Photoshop by going to `Image > Adjustments >
+Curves…` and in GIMP by going to `Colours > Curves…`.
 
 ### Filters
 
@@ -310,9 +313,9 @@ changing pixels in that each point contains a lot more information.
 
 To select a point, click on the *direct select* tool (in Photoshop) or
 the *edit path by node* tool. Then, click on the point you want to
-manipulate (see figure {fig:vector\_point}). If you want, you can
+manipulate. If you want, you can
 manipulate multiple points by holding the `shift` key down before you
-click on the next point (see figure {fig:vector\_point\_select}).
+click on the next point.
 
 Each individual point has a number of options which changes the way in
 which the line is affected by the point. To affect the point, one or
@@ -322,14 +325,17 @@ more *handles* will apprear around the point once selected. These
 while *symmetric* points will adjust all handles in the same way per
 point.
 
-> ![image](vector_point) {An example of selecting a point on a line in
+![image](/static/img/image-editing/vector_point.png) 
+
+> An example of selecting a point on a line in
 > Inkscape. The point in blue to the left has been already selected,
 > while the point in red is just being hovered over by the point-select
-> tool. {fig:vector\_point}}
+> tool. 
 
-> ![image](vector_point_select_move) {Two selected points that have been
+![image](/static/img/image-editing/vector_point_select_move.png) 
+
+> Two selected points that have been
 > moved together by using the `shift` key to select the points.
-> {fig:vector\_point\_select}}
 
 ## Object Positioning and Grouping
 
@@ -357,13 +363,13 @@ ensure that no other objects can appear above the one sent to the front.
 ## Basic Conversion Techniques (Raster to Vector)
 
 Converting a vector image to a raster format is trivial, simply use the
-{Export as…} function in the `File` menu of either Inkscape or
+`Export as…` function in the `File` menu of either Inkscape or
 Illustrator. This conversion is easy because the image is being broken
 down into pixels, rather than being turned into mathematical points.
 
 Conversion from bitmap to vector is a lot more involved as a process. To
 convert a bitmap image, you must first import the bitmap into the
-program by clicking on {File \> Import…} and selecting the bitmap you’d
+program by clicking on `File > Import…` and selecting the bitmap you’d
 like to convert.
 
 Although there are a number of computational tools to assist you with
@@ -373,16 +379,17 @@ discussed below.
 
 ### Using the automatic conversion tools
 
-To convert an image in Inkscape, open {Path \> Trace Bitmap…} and select
+To convert an image in Inkscape, open `Path > Trace Bitmap…` and select
 the mode. `Single-scan` mode will create an outline while `Multi-scan`
 mode will create a number of small polygons. Once scanned, you can
-manipulate the image like you would any other vectorized image (see
-figure {fig:vector\_convert}).
+manipulate the image like you would any other vectorized image.
 
-> ![image](vector_convert) {An example of the vector bitmap-tracing
+![image](/static/img/image-editing/vector_convert.png) 
+
+> An example of the vector bitmap-tracing
 > options. The `update` button. Shows what the conversion will look
 > like, and pressing `OK` will convert the image (a converted image is
-> show on the right). {fig:vector\_convert}}
+> show on the right).
 
 ### The manual method
 
@@ -392,14 +399,16 @@ details you want to draw. Finally, place the image on a *layer* behind
 all others and *lock* the layer by clicking on the padlock icon. This
 will ensure that your new drawing will in no way affect the original
 image. Create layers above the original image and sketch around the
-image (see figure {fig:vector\_sketch}). Be sure to create groups for
-parts of the image which belong together. Before saving, be sure to
-remove the embedded bitmap, or your filesize will suffer.
+image. Be sure to create groups for
+parts of the image which belong together. Before saving, *be sure to
+remove the embedded bitmap, or your filesize will suffer*.
 
-> ![image](vector_sketch) {An example of the manual conversion
+![image](/static/img/image-editing/vector_sketch.png) 
+
+> An example of the manual conversion
 > technique. Each coloured polygon is hand-drawn above the image. To
 > achieve the highest quality, one can use a series of layers with
-> varying transparencies. {fig:vector\_sketch}}
+> varying transparencies.
 
 # Image File Formats
 
@@ -425,37 +434,51 @@ Images are mainly stored in two ways:
 
 ## Raster Image Filetypes
 
-> Extension & Stands For & description & Windows App & Mac App & Linux
-> App & lossless? & transparent? \
->
-> `jpg`/`jpeg` & Joint Photographic Experts Group & The basic filetype
-> for taking photos from a digital camera & Image Viewer, Adobe
-> Photoshop & Preview, iPhoto & Eye of Gnome, ***GNU Image Processor
-> (GIMP)*** & **No** & **No** \
->
-> `gif` & Graphic Interchange Format & The former standard filetype for
-> web images. Lightweight, but bad for gradients and photos. Good for
-> basic images & Image Viewer, Adobe Photoshop, Adobe Fireworks &
-> Preview, iPhoto, Fireworks & Eye of Gnome, ***GNU Image Processor
-> (GIMP)*** & **No** & **Yes** \
->
-> `png` & Portable Network Graphics & The new standard for web images.
-> Lightweight and can handle gradients and photos. Superior
-> text-rendering compared to JPG. & Image Viewer, Adobe Photoshop &
-> Preview, iPhoto & Eye of Gnome, ***GNU Image Processor (GIMP)*** &
-> **Yes** & **Yes** \
->
-> `raw`, `crw`, `orf` & uncompressed means Raw & The modern standard for
-> image capture. No compression makes for big files, but no quality is
-> lost due to compression. & Image Viewer, Adobe Photoshop (CS1 and
-> later) & Preview, iPhoto & Eye of Gnome, ***GNU Image Processor
-> (GIMP)*** (with UFRaw plugin) & **Yes** & **No** \
->
-> `tif`, `tiff` & Tagged Image Format & The standard for scanned
-> documents or high-data images (such as geo-tagged images or
-> archiving). & Image Viewer, Adobe Photoshop & Preview, iPhoto & Eye of
-> Gnome, ***GNU Image Processor (GIMP)*** & **Both (depends on
-> compression)** & **No** \
+<table style="border-width: 1px; border: #000;">
+<tr>
+
+<th>Extension</th> <th>Stands For</th><th> description</th> <th>Windows
+App</th> <th>Mac App</th> <th>Linux App</th> <th>lossless?</th>
+<th>transparent?</th>
+
+</tr>
+
+<tr>
+<td>`jpg`/`jpeg`</td> <td>Joint Photographic Experts Group</td> <td>The basic filetype
+for taking photos from a digital camera</td> <td>Image Viewer, Adobe
+Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, ***GNU Image Processor
+(GIMP)***</td> <td>**No**</td> <td>**No**</td> 
+</tr>
+
+<tr>
+<td>`gif`</td> <td>Graphic Interchange Format</td> <td>The former standard filetype for
+web images. Lightweight, but bad for gradients and photos. Good for
+basic images</td> <td>Image Viewer, Adobe Photoshop, Adobe Fireworks</td> <td>Preview, iPhoto, Fireworks</td> <td>Eye of Gnome, ***GNU Image Processor
+(GIMP)***</td> <td>**No**</td> <td>**Yes**</td> 
+</tr>
+
+<tr>
+<td>`png`</td> <td>Portable Network Graphics</td> <td>The new standard for web images.
+Lightweight and can handle gradients and photos. Superior
+text-rendering compared to JPG.</td> <td>Image Viewer, Adobe Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, ***GNU Image Processor (GIMP)***</td> <td>**Yes**</td> <td>**Yes**</td> 
+</tr>
+
+<tr>
+<td>`raw`, `crw`, `orf`</td> <td>uncompressed means Raw</td> <td>The modern standard for
+image capture. No compression makes for big files, but no quality is
+lost due to compression.</td> <td>Image Viewer, Adobe Photoshop (CS1 and
+later)</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, ***GNU Image Processor
+(GIMP)*** (with UFRaw plugin)</td> <td>**Yes**</td> <td>**No**</td>
+</tr>
+
+<tr>
+<td>`tif`, `tiff`</td> <td>Tagged Image Format</td><td>The standard for scanned
+documents or high-data images (such as geo-tagged images or
+archiving).</td> <td>Image Viewer, Adobe Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of
+Gnome, ***GNU Image Processor (GIMP)***</td> <td>**Both (depends on
+compression)**</td> <td>**No**</td>
+</tr>
+</table>
 
 ## Vector Filetype
 
