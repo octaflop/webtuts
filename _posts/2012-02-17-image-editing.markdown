@@ -434,65 +434,71 @@ Images are mainly stored in two ways:
 
 ## Raster Image Filetypes
 
-<table style="border-width: 1px; border: #000;">
+<table border="1">
 <tr>
-
 <th>Extension</th> <th>Stands For</th><th> description</th> <th>Windows
 App</th> <th>Mac App</th> <th>Linux App</th> <th>lossless?</th>
 <th>transparent?</th>
-
 </tr>
 
 <tr>
-<td>`jpg`/`jpeg`</td> <td>Joint Photographic Experts Group</td> <td>The basic filetype
+<td><code>jpg</code>/<code>jpeg</code></td> <td>Joint Photographic Experts Group</td> <td>The basic filetype
 for taking photos from a digital camera</td> <td>Image Viewer, Adobe
-Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, ***GNU Image Processor
-(GIMP)***</td> <td>**No**</td> <td>**No**</td> 
+Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, <b><i>GNU Image Processor
+(GIMP)</i></b></td> <td><b><i>No</td> <td><b><i>No</i></b></td> 
 </tr>
 
 <tr>
-<td>`gif`</td> <td>Graphic Interchange Format</td> <td>The former standard filetype for
+<td><code>gif</code></td> <td>Graphic Interchange Format</td> <td>The former standard filetype for
 web images. Lightweight, but bad for gradients and photos. Good for
-basic images</td> <td>Image Viewer, Adobe Photoshop, Adobe Fireworks</td> <td>Preview, iPhoto, Fireworks</td> <td>Eye of Gnome, ***GNU Image Processor
-(GIMP)***</td> <td>**No**</td> <td>**Yes**</td> 
+basic images</td> <td>Image Viewer, Adobe Photoshop, Adobe Fireworks</td> <td>Preview, iPhoto, Fireworks</td> <td>Eye of Gnome, <b><i>GNU Image Processor
+(GIMP)</i></b></td> <td><b>No</b></td> <td><b>Yes</b></td> 
 </tr>
 
 <tr>
-<td>`png`</td> <td>Portable Network Graphics</td> <td>The new standard for web images.
+<td><code>png</code></td> <td>Portable Network Graphics</td> <td>The new standard for web images.
 Lightweight and can handle gradients and photos. Superior
-text-rendering compared to JPG.</td> <td>Image Viewer, Adobe Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, ***GNU Image Processor (GIMP)***</td> <td>**Yes**</td> <td>**Yes**</td> 
+text-rendering compared to JPG.</td> <td>Image Viewer, Adobe Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, <b><i>GNU Image Processor (GIMP)</i></b></td> <td><b>Yes</b></td> <td><b>Yes</b></td> 
 </tr>
 
 <tr>
-<td>`raw`, `crw`, `orf`</td> <td>uncompressed means Raw</td> <td>The modern standard for
+<td><code>raw</code>, <code>crw</code>, <code>orf</code></td> <td>uncompressed means Raw</td> <td>The modern standard for
 image capture. No compression makes for big files, but no quality is
 lost due to compression.</td> <td>Image Viewer, Adobe Photoshop (CS1 and
-later)</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, ***GNU Image Processor
-(GIMP)*** (with UFRaw plugin)</td> <td>**Yes**</td> <td>**No**</td>
+later)</td> <td>Preview, iPhoto</td> <td>Eye of Gnome, <b><i>GNU Image Processor
+(GIMP)</i></b> (with UFRaw plugin)</td> <td><b>Yes</b></td> <td><b>No</b></td>
 </tr>
 
 <tr>
-<td>`tif`, `tiff`</td> <td>Tagged Image Format</td><td>The standard for scanned
+<td><code>tif</code>, <code>tiff</code></td> <td>Tagged Image Format</td><td>The standard for scanned
 documents or high-data images (such as geo-tagged images or
 archiving).</td> <td>Image Viewer, Adobe Photoshop</td> <td>Preview, iPhoto</td> <td>Eye of
-Gnome, ***GNU Image Processor (GIMP)***</td> <td>**Both (depends on
-compression)**</td> <td>**No**</td>
+Gnome, <b><i>GNU Image Processor (GIMP)</i></b></td> <td><b>Both (depends on
+compression)</b></td> <td><b>No</b></td>
+</tr>
+
+</table>
+
+## Vector Filetypes
+
+<table border=1>
+<tr>
+<th>Extension</th><th>Stands For</th><th>description</th><th>Windows App</th><th>Mac App</th><th>Linux App</th>
+</tr>
+<tr>
+<td><code>svg</code></td><td>Scalable Vector Format</td> <td>The open standard for vector images.
+</td><td>Image Viewer, Adobe Illustrator, <b><i>Inkscape</i></b></td> <td>Preview, iPhoto,
+<b><i>Inkscape</i></b></td> <td>Eye of Gnome, <b><i>Inkscape</i></b></td>
+</tr>
+<tr>
+<td><code>ai</code></td> <td>Adobe Illustrator</td> <td>Adobe’s proprietary format for vectors.
+More advanced support for layers and masking. No real advantage over
+<code>SVG</code> filetype.</td> <td><b><i>Adobe Illustrator</i></b></td><td>Preview, <b>Adobe
+Illustrator</b></td> <td>Eye of Gnome, <b><i>Inkscape</i></b></td>
 </tr>
 </table>
 
-## Vector Filetype
 
-> Extension & Stands For & description & Windows App & Mac App & Linux
-> App \
->
-> `svg` & Scalable Vector Format & The open standard for vector images.
-> & Image Viewer, Adobe Illustrator, ***Inkscape*** & Preview, iPhoto,
-> ***Inkscape*** & Eye of Gnome, ***Inkscape*** \
->
-> `ai` & Adobe Illustrator & Adobe’s proprietary format for vectors.
-> More advanced support for layers and masking. No real advantage over
-> `SVG` filetype. & **Adobe Illustrator** & Preview, **Adobe
-> Illustrator** & Eye of Gnome, ***Inkscape*** \
 
 [^1]: In this context, *discrete* refers to the idea of separate
     integers. One can think of computers working in a step-by-step
