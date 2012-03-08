@@ -427,10 +427,9 @@ Images are mainly stored in two ways:
 
 1.  **Raster/Bitmap**: Each dot (or *pixel*) is stored into the file.
     Compression blends pixels together and zooming in on an image will
-    cause dottiness (as in the left side of fig {fig:rassvg}.
+    cause dottiness.
 
-2.  **Vector**: Lines are stored into the image as mathematical formulæ
-    (as in the right side of fig {fig:rassvg}.
+2.  **Vector**: Lines are stored into the image as mathematical formulæ.
 
 ## Raster Image Filetypes
 
