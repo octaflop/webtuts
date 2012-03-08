@@ -1,3 +1,4 @@
+permalink: pretty
 markdown: kramdown
 pygments: true
 server: true
