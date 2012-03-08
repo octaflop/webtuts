@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-		<div class="container">
+		<div class="container-fluid">
 			<div class="hero-unit">
 				<h1>hack·tiv·i·ty</h1>
 				<i class='phonemic'>/hakˈtivitē/</i><br />
@@ -11,12 +11,12 @@ layout: default
 					<li><p>The condition in which things are being hacked.</p></li>
 				</ol>
 				<!--<img src="/static/img/tutorial.png" />-->
-				<p><a class="btn btn-primary btn-large" id="learn">Learn more &raquo;</a></p>
+				<p><a class="btn btn-primary btn-large" id="learn" href='/about/'>Learn more &raquo;</a></p>
 			</div>
 		</div>
 
 
-		<div class="container">
+		<div class="container-liquid">
 			{% include belts.html %}
 		</div>
 		<hr />
@@ -24,25 +24,25 @@ layout: default
 
 <div class="content container-white">
 	{{ content }}
-</div>
-<div class="container-white archive">
-	<div class="row">
-		<div class='span6'>
-			<h3>Latest Posts</h3>
-			<ul>
-				{% for post in site.posts %}
-					<li>
-						<tt>{{ post.date | date_to_string }} ({{ post.date }})</tt><br />
-						<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-		<div class='span6'>
-			<h3>Resources</h3>
-			<ul>
-				<a href="#"></a>
-			</ul>
+	<div class="container-white archive">
+		<div class="row">
+			<div class='span6 latest'>
+				<h3>Latest Posts</h3>
+				<ul>
+					{% for post in site.posts %}
+						<li>
+							<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+							<tt>{{ post.date | date_to_string }} ({{ post.date }})</tt><br />
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class='span6'>
+				<h3>Resources</h3>
+				<ul>
+					<a href="http://example.com/">Example</a>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

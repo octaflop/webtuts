@@ -1,28 +1,30 @@
 body, html {
-	background: #080808;
+	background: #242424;
 }
 
-.container > .row {
-	margin-left: -.2em; /* see below, belts div */
+ul {
+	list-style: square url('/static/img/list-decoration.png');
 }
 
 .belts div {
 	background: url("/static/img/textures/groovepaper.png");
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
-	padding: 0.5em;
-	margin: 0.1em; /* we correct this in .container > row. kind of a monkey-patch */
 }
 
 .belts h2 {
 	background: url("/static/img/textures/groovepaper.png");
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
-	padding: 0.25em;
+	#padding: 0.25em;
 }
 
 .belts li > a {
 	/*color: #fed300;*/
+}
+
+div.container-liquid {
+	margin-left: 1.5em;
 }
 
 .white-belt h2 {
@@ -59,3 +61,113 @@ body, html {
 	background: #fafafa;
 }
 
+.set-1 {
+	font-size: 0.9em;
+}
+.set-2 {
+	font-size: 1.1em;
+}
+.set-3 {
+	font-size: 1.3em;
+}
+.set-4 {
+	font-size: 1.5em;
+}
+.set-5 {
+	font-size: 1.7em;
+}
+.set-6 {
+	font-size: 1.9em;
+}
+
+#tag-cloud {
+	opacity: .6;
+	background-color: #fafafa;
+}
+
+header > .taglist {
+	box-shadow: 0px 1px 8px #876543;
+	-webkit-box-shadow: 0px 1px 8px #876543;
+	-mox-box-shadow: 0px 1px 8px #876543;
+}
+
+ul {
+	margin-left: 0;
+}
+
+ul.cattags li {
+	display: inline;
+	text-align: right;
+}
+
+.tag-wordpress {
+	background-color: #345679;
+}
+
+.tag-image {
+	background-color: #344279;
+}
+
+.tag-editing {
+	background-color: #34aa79;
+}
+
+fieldset.taglist {
+	background-color: #afafaf;
+}
+
+fieldset.taglist > legend {
+	/*box-shadow: 0px 1px 2px #876543;
+	-webkit-box-shadow: 0px 1px 2px #876543;
+	-mox-box-shadow: 0px 1px 2px #876543;*/
+	font-size: .8em;
+	border-bottom: none;
+	background-color: #fafafa;
+	width: 4em;
+	margin-right: .3em;
+	text-align: right;
+}
+
+li.belt-loop {
+	list-style-type: none;
+}
+
+div.content {
+	background-color: #efefef;
+}
+
+ul.topic-list {
+	margin-left: 3.5em;
+}
+
+.belt p {
+	margin-left: .8em;
+}
+
+.belt h2 > a {
+	margin-left: .4em;
+	color: #fff;
+}
+
+.white-belt h2 > a {
+	margin-left: .4em;
+	color: #000;
+}
+
+.belt h2 > a:visited {
+	margin-left: .4em;
+	color: #fff;
+}
+
+.belt h2 > a:hover {
+	margin-left: .4em;
+	color: #4a6;
+}
+
+.latest h3 {
+	margin-left: 1.5em;
+}
+
+.latest ul {
+	margin-left: 3.5em;
+}
