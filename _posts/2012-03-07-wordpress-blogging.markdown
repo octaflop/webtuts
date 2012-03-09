@@ -5,11 +5,52 @@ title: Blogging with Wordpress
 category: white-belt
 ---
 
+# Introduction: What is Blogging?
+
+*Blogging* is a term refering to a we**b** **log**s, which is a collection of
+online dated entries describing news on a certain subject. Blogging is an
+essential part of any organization's new media strategy and a well-kept,
+frequently updated blog can catalyze marketing campaigns already underway. In
+addition, the categorization power of blogs allows for resources to be
+accessible in a way that filters signal from noise.
+
+## Wordpress
+
+For this first blogging tutorial, we will be working with the
+*[Wordpress](http://wordpress.org/)* blogging platform. An advantage of
+wordpress is that the Wordpress organization offers both the ability to host on
+their servers, or the option of hosting their software on your servers.
+
+## Other Platforms
+
+Most other blogging platforms borrow concepts from Wordpress's publishing
+model. Specifically, the concept of a *page* versus a *post*. Wordpress
+considers a *page* to be a static web page that rarely changes and has an
+easily-accessible url. An example of this is an `/about/` *page*, which lists
+what the entire site is about and may be irregularily updated with links to
+features. On the other hand, a *post* is a time-sensitive entry, and is usually
+found with a date in the url, such as: `/blog/2012/03/08/some-post`. Posts will
+show up in people's newsfeeds, and typically on the front page of the site.
+Although pages and posts can both have categories, it is more typical to only
+categorize a post. 
+
+## Administrating your Dynamic Site
+
+At its heart, all a *blog* is a dynamic website. Like all dynamic websites,
+this website is editable using a normal web-browser. In order to protect
+against anonymous, un-verified edits, users are typically given administration
+access. The amount of access given to a user account depends on the role of the
+user. For example, a user with an author role may not edit or delete the posts
+of others, but a user with an editor role may. The admin role always has full
+access to the site (and can grant roles to other users) so there should always
+be a textual account of who has admin roles on a given site.
+
 # Logging in
 
-Log into your wordpress site by going to `http://<your site>/wp-admin` where
-`<your site>` is your domain name, such as `example.com`. Enter your username
-and password and click `Log In` to log in.
+Log into your wordpress admin site by going to `http://<yoursite>/wp-admin`[^1]
+
+where `<your site>` is your domain name, such as `example.com`. Enter your
+username and password and click `Log In` to log in.
 
 ![Wordpress login example](/static/img/wordpress/wp-login.png)
 
@@ -29,6 +70,8 @@ posts on the site:
 * [The Wordpress.org Codex (Documentation)](http://codex.wordpress.org/Main_Page)
 * [Wordpress.org Codex: Posts](http://codex.wordpress.org/Posts)
 
+# Footnotes
 
-
+[^1]: Variables listed in brackets (`<like this>`) should be replaced with the
+user's information.
 
