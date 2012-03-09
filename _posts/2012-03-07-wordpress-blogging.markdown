@@ -45,24 +45,42 @@ of others, but a user with an editor role may. The admin role always has full
 access to the site (and can grant roles to other users) so there should always
 be a textual account of who has admin roles on a given site.
 
-# Logging in
+# Logging in and Administrating
 
+## Logging in
 Log into your wordpress admin site by going to `http://<yoursite>/wp-admin`[^1]
 
 where `<your site>` is your domain name, such as `example.com`. Enter your
 username and password and click `Log In` to log in.
 
-![Wordpress login example](/static/img/wordpress/wp-login.png)
+> ![Wordpress login example](/static/img/wordpress/wp-login.png)
 
-# Admin Menu
+## The Admin Menu
 
 Once you are logged in, you will be greeted with an admin menu:
-![Wordpress admin menu](/static/img/wordpress/wp-admin.png)
+
+> ![Wordpress admin menu](/static/img/wordpress/wp-admin.png)
 
 At this menu, you will want to click on `Posts`. This will list all of the blog
 posts on the site:
-![Wordpress post menu link](/static/img/wordpress/wp-admin-post.png)
-![Wordpress post menu listing](/static/img/wordpress/wp-admin-post-list.png)
+
+> ![Wordpress post menu link](/static/img/wordpress/wp-admin-post.png)
+> ![Wordpress post menu listing](/static/img/wordpress/wp-admin-post-list.png)
+
+# Creating, Previewing, Publishing, and Deleting Posts & Pages
+
+## Creating a New Post
+
+To create a post, click on the `Add New` link on the Posts menu. You will be
+presented with a web form similar to this one:
+
+> ![Wordpress post menu creation](/static/img/wordpress/wp-admin-post-create.png)
+
+To add images or other media to the post, click on the `Upload` button between
+the `Title` field and the `Content` textarea. You will be asked to upload your
+files in a menu such as this one:
+
+> ![Wordpress post menu media addition](/static/img/wordpress/wp-admin-post-media-up.png)
 
 
 # Additional Resources
