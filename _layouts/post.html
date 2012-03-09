@@ -7,6 +7,16 @@ layout: default
 	</div>
 
 	<article class="span9 body">
+		<header class="meta">
+		<fieldset class='taglist'>
+			<legend>tags</legend>
+			<ul class='cattags span10'>
+			{% for tag in page.tags %}
+				<li><a class="tag-{{ tag }} span2" href="/tag/{{ tag }}/">{{ tag }}</a></li>
+			{% endfor %}
+			</ul>
+		</fieldset>
+		</header>
 		{{ content }}
 		<footer class="meta">
 		<i><a href="{{ page.url }}">{{ page.date }}</a></i>
