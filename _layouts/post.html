@@ -8,14 +8,19 @@ layout: default
 
 	<article class="span9 body">
 		<header class="meta">
-		<fieldset class='taglist'>
-			<legend>tags</legend>
-			<ul class='cattags span10'>
-			{% for tag in page.tags %}
-				<li><a class="tag-{{ tag }} span2" href="/tag/{{ tag }}/">{{ tag }}</a></li>
-			{% endfor %}
-			</ul>
-		</fieldset>
+		{% if page.tags %}
+		<div class='taglist'>
+			<div class='container'>
+				<div class="row">
+					<ul class='span10'>
+					{% for tag in page.tags %}
+						<li><a class="tag-{{ tag }} span2" href="/tag/{{ tag }}/">{{ tag }}</a></li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{% endif %}
 		</header>
 		{{ content }}
 		<footer class="meta">

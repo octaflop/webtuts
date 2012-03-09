@@ -2,7 +2,7 @@ body, html {
 	background: #242424;
 }
 
-ul {
+ul.brain_list {
 	list-style: square url('/static/img/list-decoration.png');
 }
 

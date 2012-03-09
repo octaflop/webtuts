@@ -3,7 +3,7 @@
 		<h2><a href='/white-belt/'>White Belt</a></h2>
 		<p>Still new to the whole computer thing? You're going to want to
 		start here. </p>
-		<ul class='topic-list'>
+		<ul class='topic-list brain_list'>
 			{% for post in site.categories.white-belt %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
@@ -22,7 +22,7 @@
 			Feeling more comfortable with the terminology? Ready to start making
 			stuff? This is the next stop for the novice hacker.
 		</p>
-		<ul class='topic-list'>
+		<ul class='topic-list brain_list'>
 			{% for post in site.categories.yellow-belt %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
@@ -40,7 +40,7 @@
 			Now it's time to put our skills to use and start contributing back to the
 			community. These lessons focus on Internet publishing.
 		</p>
-		<ul class='topic-list'>
+		<ul class='topic-list brain_list'>
 			{% for post in site.categories.green-belt %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
@@ -62,7 +62,7 @@
 			Automation is the name of the orange-belt game. These lessons focus on
 			getting your computer to take care of your work for you.
 		</p>
-		<ul class='topic-list'>
+		<ul class='topic-list brain_list'>
 			{% for post in site.categories.orange-belt %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
@@ -80,7 +80,7 @@
 			on best programming practises and stuff a bit more advanced than
 			basic scripting and automation.
 		</p>
-		<ul class='topic-list'>
+		<ul class='topic-list brain_list'>
 			{% for post in site.categories.purple-belt %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
@@ -95,14 +95,14 @@
 		<h2><a href="/black-belt/">Black Belt</a></h2>
 		<p>Hello, fellow master. Still think you're up for a challenge? These
 		lessons focus on being the best hacker you can be.</p>
-		<ul class='topic-list'>
+		<ul class='topic-list brain_list'>
 			{% for post in site.categories.black-belt %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 		</ul>
 		<p>
 			<a class='btn'>
-				Bring it! &raquo;
+				Come at me, bro! &raquo;
 			</a>
 		</p>
 	</div>
