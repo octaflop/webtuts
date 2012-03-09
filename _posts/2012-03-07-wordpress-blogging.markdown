@@ -82,6 +82,12 @@ files in a menu such as this one:
 
 > ![Wordpress post menu media addition](/static/img/wordpress/wp-admin-post-media-up.png)
 
+When you click on `Browse Files`, your browser will open a `filebrowser` which
+you can use to navigate around the files in your computer to find the media you
+need. In this example, an image is being selected for uploading to the site
+
+> ![Wordpress post menu media addition](/static/img/wordpress/upload-file.png)
+
 
 # Additional Resources
 

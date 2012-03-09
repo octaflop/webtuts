@@ -1,0 +1,11 @@
+		<div class='taglist'>
+			<div class='container'>
+				<div class="row">
+					<ul class='span10'>
+					{% for tag in page.tags %}
+						<li><a class="tag-{{ tag }} span2" href="/tag/{{ tag }}/">{{ tag }}</a></li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>

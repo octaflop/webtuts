@@ -8,23 +8,13 @@ layout: default
 
 	<article class="span9 body">
 		<header class="meta">
-		{% if page.tags %}
-		<div class='taglist'>
-			<div class='container'>
-				<div class="row">
-					<ul class='span10'>
-					{% for tag in page.tags %}
-						<li><a class="tag-{{ tag }} span2" href="/tag/{{ tag }}/">{{ tag }}</a></li>
-					{% endfor %}
-					</ul>
-				</div>
-			</div>
-		</div>
-		{% endif %}
+		<i><datetime><a href="{{ page.url }}">{{ page.date }}</a></datetime></i>
 		</header>
 		{{ content }}
 		<footer class="meta">
-		<i><a href="{{ page.url }}">{{ page.date }}</a></i>
+		{% if page.tags %}
+			{% include taglist.html %}
+		{% endif %}
 		</footer>
 	</article>
 </div>
