@@ -76,6 +76,8 @@ presented with a web form similar to this one:
 
 > ![Wordpress post menu creation](/static/img/wordpress/wp-admin-post-create.png)
 
+### Adding Media to your Post
+
 To add images or other media to the post, click on the `Upload` button between
 the `Title` field and the `Content` textarea. You will be asked to upload your
 files in a menu such as this one:
@@ -85,9 +87,54 @@ files in a menu such as this one:
 When you click on `Browse Files`, your browser will open a `filebrowser` which
 you can use to navigate around the files in your computer to find the media you
 need. In this example, an image is being selected for uploading to the site
+from the ubuntu filebrowser:
 
 > ![Wordpress post menu media addition](/static/img/wordpress/upload-file.png)
 
+Once the image is uploaded, you can add textual details and metadata about the
+image. It is important to input some metadata so that Google can read the page
+well. It is also important to input metadata so that media organization doesn't
+grow into an extreme burden. Metadata also allows you to add a caption to the
+image, as well as changing the image alignment and size:
+
+> ![Wordpress post menu media details](/static/img/wordpress/media-details.png)
+
+Once you are satisfied with your image details, you may insert it into the post
+by clicking on the `Insert into Post` button. You may also make the image into
+a `Feature Image` which will be used to represent the blog in menus and post
+listings:
+
+> ![Wordpress post menu media insert](/static/img/wordpress/media-insert.png)
+
+## Publishing your Post
+
+To publish your post, click on the `Publish` button located to the right of
+your post title and content:
+
+> ![Wordpress post menu media insert](/static/img/wordpress/wp-admin-post-publish.png)
+
+This menu also contains a `Preview` button which will display the page on the
+site without publishing it to the public. It is a best practice to preview your
+new post before publishing it to the main site (some organizations / blogging
+platforms require this). 
+
+## Changing the post time
+
+Notice that the Publish Menu also contains an option `Publish Immediately`
+which is bolded. By editing this field, you can change the publish time of your
+post and defer posting the article to a later date and time. This is useful for
+writing a series of posts and publishing them over a consistent, frequent time.
+
+## Deleting a Post
+
+If you want to remove a post, click on the `Move to Trash` link in red on the
+Publish Menu. The site will confirm that you want to delete the post, click
+‘yes’ to delete the post.
+
+# Related Tutorials
+
+* [Managing Events in Wordpress](/yellow-belt/2012/03/07/wordpress-events/) —
+Yellow Belt
 
 # Additional Resources
 
