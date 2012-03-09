@@ -112,20 +112,8 @@ ul.cattags li {
 	background-color: #34aa79;
 }
 
-fieldset.taglist {
-	background-color: #afafaf;
-}
-
-fieldset.taglist > legend {
-	/*box-shadow: 0px 1px 2px #876543;
-	-webkit-box-shadow: 0px 1px 2px #876543;
-	-mox-box-shadow: 0px 1px 2px #876543;*/
-	font-size: .8em;
-	border-bottom: none;
-	background-color: #fafafa;
-	width: 4em;
-	margin-right: .3em;
-	text-align: right;
+.taglist > .container > .row > .span10 > li {
+	list-style-type: none;
 }
 
 li.belt-loop {
@@ -171,3 +159,4 @@ ul.topic-list {
 .latest ul {
 	margin-left: 3.5em;
 }
+
