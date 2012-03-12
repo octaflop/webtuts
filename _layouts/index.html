@@ -32,7 +32,11 @@ layout: default
 					{% for post in site.posts %}
 						<li>
 							<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
-							<tt>{{ post.date | date_to_string }} ({{ post.date }})</tt><br />
+							<tt>{{ post.date | date_to_string }} ({{ post.date }})</tt>
+							<section class='post_summary'>
+								{{ post.content|truncatewords 25 }}
+								<a href="{{ post.url }}" class='btn'>&raquo;</a>
+							</section>
 						</li>
 					{% endfor %}
 				</ul>
