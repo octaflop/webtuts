@@ -11,10 +11,11 @@ layout: default
 				<title><a href="{{ post.url }}">{{ post.title }}</a></title>
 			</header>
 			<article class='abstract'>
-				{{ post.content }}
+				{{ post.content|truncatewords 25 }}
+				<a class='btn' href="{{ post.url }}">&raquo;</a>
 			</article>
 			<footer class='meta'>
-				<i>{{ post.date }}</i>
+				<i>{{ post.date|date_to_string }}</i>
 			</footer>
 		</section>
 	</li>
