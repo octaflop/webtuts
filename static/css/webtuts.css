@@ -112,7 +112,7 @@ ul.cattags li {
 	background-color: #34aa79;
 }
 
-.taglist > .container > .row > .span10 > li {
+.taglist > .container > .row > ul > li {
 	list-style-type: none;
 }
 
