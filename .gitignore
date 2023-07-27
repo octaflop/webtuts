@@ -2,4 +2,4 @@
 *.backup
 _site/
 vendor/
-
+.bundle
