@@ -3,7 +3,7 @@ markdown: kramdown
 pygments: true
 server: true
 auto: true
-exclude: src/
+exclude: [src,vendor]
 # plugins
 tag_page_layout: tag_page
 tag_page_dir: tag
