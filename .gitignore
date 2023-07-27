@@ -1,4 +1,5 @@
 .*.swp
 *.backup
 _site/
+vendor/
 
